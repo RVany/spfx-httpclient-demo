@@ -11,7 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'SpFxHttpClientDemoWebPartStrings';
 import SpFxHttpClientDemo from './components/SpFxHttpClientDemo';
 import { ISpFxHttpClientDemoProps } from './components/ISpFxHttpClientDemoProps';
-
+import { ButtonClickedCallback, ICountryListItem } from "../../../models";
 export interface ISpFxHttpClientDemoWebPartProps {
   description: string;
 }
