@@ -11,14 +11,9 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'SpFxHttpClientDemoWebPartStrings';
 import SpFxHttpClientDemo from './components/SpFxHttpClientDemo';
 import { ISpFxHttpClientDemoProps } from './components/ISpFxHttpClientDemoProps';
-import { ButtonClickedCallback, ICountryListItem } from '../../models';
+import { ButtonClickedCallback, ICountryListItem } from "../../../models";
 export interface ISpFxHttpClientDemoWebPartProps {
-  spListItems: ICountryListItem[];
-  onGetListItems?: ButtonClickedCallback;
-  isDarkTheme: boolean;
-  environmentMessage: string;
-  hasTeamsContext: boolean;
-  userDisplayName: string;
+  description: string;
 }
 
 export default class SpFxHttpClientDemoWebPart extends BaseClientSideWebPart<ISpFxHttpClientDemoWebPartProps> {
@@ -30,6 +25,7 @@ export default class SpFxHttpClientDemoWebPart extends BaseClientSideWebPart<ISp
     const element: React.ReactElement<ISpFxHttpClientDemoProps> = React.createElement(
       SpFxHttpClientDemo,
       {
+        description: this.properties.description,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
