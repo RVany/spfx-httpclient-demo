@@ -35,6 +35,15 @@ export default class SpFxHttpClientDemo extends React.Component<ISpFxHttpClientD
           <button type="button" onClick={this.onGetListItemsClicked}>
             Get Countries
           </button>
+          <button type="button" onClick={this.onAddListItemClicked}>
+            Add List Item
+          </button>
+          <button type="button" onClick={this.onUpdateListItemClicked}>
+            Update List Item
+          </button>
+          <button type="button" onClick={this.onDeleteListItemClicked}>
+            Delete List Item
+          </button>
         </div>
         <div>
           <ul>
