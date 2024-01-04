@@ -4,6 +4,33 @@ import { ISpFxHttpClientDemoProps } from './ISpFxHttpClientDemoProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class SpFxHttpClientDemo extends React.Component<ISpFxHttpClientDemoProps, {}> {
+  private onAddListItemClicked = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    event.preventDefault();
+
+    this.props.onAddListItem();
+  };
+  private onUpdateListItemClicked = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    event.preventDefault();
+
+    this.props.onUpdateListItem();
+  };
+  private onDeleteListItemClicked = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    event.preventDefault();
+
+    this.props.onDeleteListItem();
+  };
+  private onGetListItemsClicked = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ): void => {
+    event.preventDefault();
+    this.props.onGetListItems();
+  };
   public render(): React.ReactElement<ISpFxHttpClientDemoProps> {
     const {
       spListItems,
@@ -59,11 +86,4 @@ export default class SpFxHttpClientDemo extends React.Component<ISpFxHttpClientD
       </section>
     );
   }
-  private onGetListItemsClicked = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ): void => {
-    event.preventDefault();
-    this.props.onGetListItems();
-
-  };
 }

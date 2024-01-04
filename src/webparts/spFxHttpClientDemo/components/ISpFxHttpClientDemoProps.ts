@@ -6,7 +6,7 @@ export interface ISpFxHttpClientDemoProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
-  onAddListItem?: ButtonClickedCallback;
-  onUpdateListItem?: ButtonClickedCallback;
-  onDeleteListItem?: ButtonClickedCallback;
+  onAddListItem: ButtonClickedCallback;
+  onUpdateListItem: ButtonClickedCallback;
+  onDeleteListItem: ButtonClickedCallback;
 }
